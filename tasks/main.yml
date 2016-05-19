@@ -1,0 +1,25 @@
+---
+# tasks file for zfs
+- name: download rpm
+  get_url: >-
+    url={{zfs_rpm_url}}
+    dest=/tmp/{{zfs_rpm}}
+    owner=root
+    group=root
+    mode=0644
+
+- name: install repo...
+  package: >-
+    name=/tmp/{{zfs_rpm}}
+    state=present
+
+- name: install zfs-release...
+  package: >-
+    name=zfs-release
+    state=present
+
+- name: install zfs
+  package: >-
+    name=zfs
+    state=present
+

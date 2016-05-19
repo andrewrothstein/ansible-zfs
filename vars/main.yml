@@ -1,0 +1,3 @@
+---
+zfs_rpm : 'zfs-release.el{{zfs_el_ver}}.noarch.rpm'
+zfs_rpm_url : '{{zfs_mirror}}/{{zfs_rpm}}'

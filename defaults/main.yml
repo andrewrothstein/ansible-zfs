@@ -1,0 +1,3 @@
+---
+zfs_el_ver : '7'
+zfs_mirror : 'http://archive.zfsonlinux.org/epel'
