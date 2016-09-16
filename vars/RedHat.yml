@@ -1,0 +1,5 @@
+---
+zfs_mirror : http://archive.zfsonlinux.org/epel
+zfs_rpm_prefix: el
+zfs_pre_pkgs:
+  - zfs-release

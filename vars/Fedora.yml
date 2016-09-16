@@ -1,0 +1,5 @@
+---
+zfs_mirror : http://download.zfsonlinux.org/fedora
+zfs_rpm_prefix: fc
+zfs_pre_pkgs:
+  - kernel-devel
