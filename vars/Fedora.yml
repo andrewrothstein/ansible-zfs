@@ -1,5 +1,8 @@
 ---
-zfs_mirror : http://download.zfsonlinux.org/fedora
-zfs_rpm_prefix: fc
-zfs_pre_pkgs:
+zfs_installer: rpm
+
+zfs_rpm_url: '{{ zfs_mirror }}/fedora/zfs-release.fc{{ ansible_distribution_major_version }}.noarch.rpm'
+
+zfs_pkgs:
   - kernel-devel
+  - zfs

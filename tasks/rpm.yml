@@ -1,0 +1,7 @@
+---
+- name: download zfs-release rpm
+  become: yes
+  become_user: root
+  dnf:
+    name: '{{ zfs_rpm_url }}'
+    state: present

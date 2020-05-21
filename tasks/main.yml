@@ -1,39 +1,18 @@
 ---
 - name: resolve platform specific vars
-  include_vars: "{{item}}"
+  include_vars: '{{ item }}'
   with_first_found:
-    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-    - "{{ansible_distribution}}.yml"
-    - "{{ansible_os_family}}.yml"
-
-- name: download rpm
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- include_tasks: '{{ zfs_installer }}.yml'
+- name: install
   become: yes
   become_user: root
-  get_url: >-
-    url={{zfs_rpm_url}}
-    dest=/tmp/{{zfs_rpm}}
-    mode=0644
-
-- name: install pkg...
-  become: yes
-  become_user: root
-  package: >-
-    name=/tmp/{{zfs_rpm}}
-    state=present
-
-- name: install zfs pre pkgs...
-  become: yes
-  become_user: root
-  with_items:
-    - '{{zfs_pre_pkgs}}'
-  package: >-
-    name={{item}}
-    state=present
-
-- name: install zfs
-  become: yes
-  become_user: root
-  package: >-
-    name=zfs
-    state=present
-
+  package:
+    name: '{{ zfs_pkgs }}'
+    state: present

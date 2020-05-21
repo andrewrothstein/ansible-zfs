@@ -1,0 +1,4 @@
+---
+zfs_installer: pkg
+zfs_pkgs:
+  - zfsutils-linux

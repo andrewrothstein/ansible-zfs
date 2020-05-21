@@ -1,5 +1,7 @@
 ---
-zfs_mirror : http://archive.zfsonlinux.org/epel
-zfs_rpm_prefix: el
-zfs_pre_pkgs:
-  - zfs-release
+zfs_installer: rpm
+
+zfs_url: '{{ zfs_mirror }}/epel/zfs-release.el{{ ansible_distribution_major_version }}_{{ ansible_distribution_minor_version }}.noarch.rpm'
+
+zfs_pkgs:
+  - zfs

@@ -1,0 +1,21 @@
+---
+- name: add apt repositories
+  become: yes
+  become_user: root
+  with_items:
+    - 'deb http://deb.debian.org/debian {{ ansible_distribution_release }}-backports main contrib'
+    - 'deb-src http://deb.debian.org/debian {{ ansible_distribution_release }}-backports main contrib'
+  apt_repository:
+    repo: '{{ item }}'
+    state: present
+- name: pin packages...
+  become: yes
+  become_user: root
+  with_items:
+    - f: 90_zfs
+      d: /etc/apt/preferences.d
+      m: '0644'
+  template:
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: 0644

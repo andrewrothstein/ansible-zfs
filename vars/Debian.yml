@@ -1,0 +1,7 @@
+---
+zfs_installer: deb
+zfs_pkgs:
+  - dpkg-dev
+  - linux-image-amd64
+  - zfs-dkms
+  - zfsutils-linux
