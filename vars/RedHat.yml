@@ -1,7 +1,7 @@
 ---
 zfs_installer: rpm
 
-zfs_url: '{{ zfs_mirror }}/epel/zfs-release.el{{ ansible_distribution_major_version }}_{{ ansible_distribution_minor_version }}.noarch.rpm'
+zfs_rpm_url: '{{ zfs_mirror }}/epel/zfs-release.el{{ ansible_distribution_version | replace(".", "_") }}.noarch.rpm'
 
 zfs_pkgs:
   - zfs
