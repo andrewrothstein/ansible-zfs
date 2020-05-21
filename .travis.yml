@@ -10,13 +10,10 @@ env:
 - OS=alpine_3.10
 - OS=alpine_3.11
 - OS=alpine_edge
-- OS=centos_7
 - OS=centos_8
 - OS=debian_buster
 - OS=fedora_31
 - OS=fedora_32
-- OS=ubi8_8.0
-- OS=ubi8_8.1
 - OS=ubuntu_bionic
 - OS=ubuntu_xenial
 language: python
