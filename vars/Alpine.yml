@@ -1,4 +1,4 @@
 ---
-zfs_installer: pkg
+zfs_installer: apk
 zfs_pkgs:
   - zfs
