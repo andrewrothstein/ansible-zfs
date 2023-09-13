@@ -1,7 +1,15 @@
 ---
 zfs_installer: deb
+zfs_apt_repos:
+  - deb http://deb.debian.org/debian {{ ansible_distribution_release | lower }}-backports main contrib
+  - deb-src http://deb.debian.org/debian {{ ansible_distribution_release | lower }}-backports main contrib
+zfs_pins:
+  - f: 90_zfs
+    d: /etc/apt/preferences.d
+    m: '0644'
 zfs_pkgs:
   - dpkg-dev
-  - linux-image-amd64
+  - linux-headers-generic
+  - linux-image-generic
   - zfs-dkms
   - zfsutils-linux

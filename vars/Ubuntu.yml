@@ -1,4 +1,6 @@
 ---
-zfs_installer: pkg
+zfs_installer: deb
+zfs_apt_repos:
+  - deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release | lower }} main universe
 zfs_pkgs:
   - zfsutils-linux

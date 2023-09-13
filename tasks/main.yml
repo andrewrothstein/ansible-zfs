@@ -12,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - include_tasks: '{{ zfs_installer }}.yml'
-- name: install
+- name: installing OS pkgs
   become: true
   become_user: root
   package:
