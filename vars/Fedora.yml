@@ -1,7 +1,7 @@
 ---
 zfs_installer: rpm
 
-zfs_rpm_url: '{{ zfs_mirror }}/fedora/zfs-release.fc{{ ansible_distribution_major_version }}.noarch.rpm'
+zfs_rpm_url: '{{ zfs_mirror }}/fedora/zfs-release-2-3.fc{{ ansible_distribution_major_version }}.noarch.rpm'
 
 zfs_pkgs:
   - kernel-devel
