@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.epel
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -11,7 +13,7 @@
         - '{{ role_path }}/vars'
 - include_tasks: '{{ zfs_installer }}.yml'
 - name: install
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ zfs_pkgs }}'

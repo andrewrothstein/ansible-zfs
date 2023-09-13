@@ -1,6 +1,6 @@
 andrewrothstein.zfs
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-zfs.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-zfs)
+![Build Status](https://github.com/andrewrothstein/ansible-zfs/actions/workflows/build.yml/badge.svg)
 
 Installs [OpenZFS on Linux](https://github.com/openzfs/zfs/wiki)
 

@@ -1,9 +1,10 @@
-- alpine_3.10
-- alpine_3.11
+---
+- alpine_3.17
+- alpine_3.18
 - alpine_edge
-- centos_8
-- debian_buster
-- fedora_31
-- fedora_32
-- ubuntu_bionic
-- ubuntu_xenial
+- debian_bookworm
+- debian_bullseye
+- fedora_37
+- fedora_38
+- ubuntu_focal
+- ubuntu_jammy

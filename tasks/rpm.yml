@@ -1,6 +1,6 @@
 ---
-- name: download zfs-release rpm
-  become: yes
+- name: downloading zfs-release rpm from {{ zfs_rpm_url }}
+  become: true
   become_user: root
   dnf:
     name: '{{ zfs_rpm_url }}'

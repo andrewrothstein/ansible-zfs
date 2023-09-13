@@ -1,15 +1,15 @@
 ---
 - name: add apt repositories
-  become: yes
+  become: true
   become_user: root
   with_items:
-    - 'deb http://deb.debian.org/debian {{ ansible_distribution_release }}-backports main contrib'
-    - 'deb-src http://deb.debian.org/debian {{ ansible_distribution_release }}-backports main contrib'
+    - deb http://deb.debian.org/debian {{ ansible_distribution_release }}-backports main contrib
+    - deb-src http://deb.debian.org/debian {{ ansible_distribution_release }}-backports main contrib
   apt_repository:
     repo: '{{ item }}'
     state: present
-- name: pin packages...
-  become: yes
+- name: pining packages...
+  become: true
   become_user: root
   with_items:
     - f: 90_zfs
