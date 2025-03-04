@@ -1,7 +1,7 @@
 ---
-- name: downloading zfs-release rpm from {{ zfs_rpm_url }}
+- name: Downloading zfs-release rpm from {{ zfs_rpm_url }}
   become: true
   become_user: root
-  dnf:
+  ansible.builtin.dnf:
     name: '{{ zfs_rpm_url }}'
     state: present

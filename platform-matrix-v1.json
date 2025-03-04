@@ -1,0 +1,38 @@
+[
+  {
+    "OS": "alpine",
+    "OS_VER": "3.20"
+  },
+  {
+    "OS": "alpine",
+    "OS_VER": "3.21"
+  },
+  {
+    "OS": "alpine",
+    "OS_VER": "edge"
+  },
+  {
+    "OS": "debian",
+    "OS_VER": "bookworm"
+  },
+  {
+    "OS": "debian",
+    "OS_VER": "bullseye"
+  },
+  {
+    "OS": "fedora",
+    "OS_VER": "40"
+  },
+  {
+    "OS": "fedora",
+    "OS_VER": "41"
+  },
+  {
+    "OS": "ubuntu",
+    "OS_VER": "jammy"
+  },
+  {
+    "OS": "ubuntu",
+    "OS_VER": "noble"
+  }
+]

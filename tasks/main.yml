@@ -1,8 +1,9 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.epel
+  ansible.builtin.include_role:
     name: andrewrothstein.epel
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -11,10 +12,11 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- include_tasks: '{{ zfs_installer }}.yml'
-- name: installing OS pkgs
+- name: Running {{ zfs_installer }} installer
+  ansible.builtin.include_tasks: '{{ zfs_installer }}.yml'
+- name: Installing OS pkgs
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ zfs_pkgs }}'
     state: present
