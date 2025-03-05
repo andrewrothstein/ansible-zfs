@@ -5,3 +5,4 @@
   ansible.builtin.dnf:
     name: '{{ zfs_rpm_url }}'
     state: present
+    disable_gpg_check: true
