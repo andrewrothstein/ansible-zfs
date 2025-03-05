@@ -1,2 +1,3 @@
 ---
 zfs_mirror: http://download.zfsonlinux.org
+zfs_release: 2-6
